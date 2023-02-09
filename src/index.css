@@ -1,0 +1,37 @@
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C4C4C4;
+    border-radius: 25px;
+}
+
+.container {
+    overflow-x: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 25px;
+    margin-top: 10px;
+    /* padding-right: 35px; */
+    /* padding-left: 35px; */
+    box-shadow: 10px 10px 10px #00000016;
+    height: 765px;
+}
+
+.container2 {
+    overflow-x: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 30px;
+    margin-top: 10px;
+    padding: 7px;
+}
+
+.boxContainer {
+    box-shadow: 0px 8px 10px #00000040;
+}
