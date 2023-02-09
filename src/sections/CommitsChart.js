@@ -35,8 +35,8 @@ function Commits() {
       let categories = [];
 
       commits.forEach(item => {
-        coreData.push(item.commits);
-        ecosystemData.push(item.commits);
+        coreData.push(item.commits_core);
+        ecosystemData.push(item.commits_ecosystem ? item.commits_ecosystem : 0);
         categories.push(item.display_month);
       });
 
@@ -60,13 +60,13 @@ function Commits() {
     },
     colors: ["#F15A24", "#F2C1B0"],
     fill: {
-      // colors: ["#F15A24", "#F2C1B0"],
-      colors: ["#F2C1B0", "#F15A24"],
+      colors: ["#F15A24", "#F2C1B0"],
+      //colors: ["#F2C1B0", "#F15A24"],
     },
     stroke: {
       width: 2,
-      // colors: ["#F15A24", "#F2C1B0"],
-      colors: ["#F2C1B0", "#F15A24"],
+       colors: ["#F15A24", "#F2C1B0"],
+      //colors: ["#F2C1B0", "#F15A24"],
     },
     grid: {
       borderColor: '#000000',

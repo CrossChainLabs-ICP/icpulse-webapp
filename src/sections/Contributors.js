@@ -31,16 +31,16 @@ const ChartWrapperStyle = styled('div')(({ theme }) => ({
 /**
  * Pie chart that displays the number of issues.
  */
-function Issues() {
+function Contributors() {
   const [state, setState] = useState({ loading: true, chartData: [0, 0] });
 
   useEffect(() => {
     const client = new Client();
     client.get('statistics').then((statistics) => {
-      let open = parseInt((statistics?.issues_open) ? statistics?.issues_open : 0);
-      let closed = parseInt((statistics?.issues_closed) ? statistics?.issues_closed : 0);
+      let new_contributors = parseInt((statistics?.new_contributors) ? statistics?.new_contributors : 0);
+      let active_contributors = parseInt((statistics?.active_contributors) ? statistics?.active_contributors : 0);
 
-      setState({ loading: false, chartData: [open, closed] });
+      setState({ loading: false, chartData: [new_contributors, active_contributors] });
     });
   }, [setState]);
 
@@ -97,4 +97,4 @@ function Issues() {
   );
 }
 
-export default Issues;
+export default Contributors;

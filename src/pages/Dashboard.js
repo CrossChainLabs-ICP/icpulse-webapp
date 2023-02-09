@@ -10,7 +10,7 @@ import {
   Commits,
   CardWidget,
   TopContributors,
-  Issues,
+  Contributors,
   Ecosystem,
 } from '../sections';
 
@@ -114,7 +114,7 @@ export default function Dashboard() {
           </Grid>
 
           <Grid item xs={12} md={3} lg={4}>
-            <Issues />
+            <Contributors />
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
