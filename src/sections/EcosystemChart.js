@@ -73,7 +73,7 @@ function Ecosystem() {
 
   return (
     <Card sx={{ marginTop: '3rem', boxShadow: 4 }}>
-      <CardHeader title="Projects" />
+      <CardHeader title="Active Repositories" />
       <Box sx={{ mt: 3, mx: 3 }} dir="ltr">
         <ReactApexChart
           type="line"
