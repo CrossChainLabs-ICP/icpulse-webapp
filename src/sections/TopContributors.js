@@ -58,7 +58,7 @@ function TopContributors() {
 
   return (
     <Card sx={{ marginTop: '3rem', boxShadow: 4 }}>
-      <CardHeader title="Top contributors" />
+      <CardHeader title="Contributors of the month" />
       <Stack spacing={5.37} sx={{ p: 5.4, pr: 0, height: '25.5rem', overflowY: 'scroll' }}>
         {state.top_contributors?.map((item) => (
           <ContributorItem key={item.dev_name} item={item} />
