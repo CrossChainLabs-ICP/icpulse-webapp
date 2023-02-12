@@ -2,7 +2,7 @@
 import { merge } from 'lodash';
 import ReactApexChart from 'react-apexcharts';
 import { styled } from '@mui/material/styles';
-import { Card, CardHeader } from '@mui/material';
+import { Card, CardHeader, Typography } from '@mui/material';
 import { number } from '../utils/format';
 import { CustomChart } from '../components/chart';
 import { useState, useEffect } from 'react';
@@ -89,7 +89,19 @@ function Contributors() {
 
   return (
     <Card sx={{ marginTop: '3rem', boxShadow: 4 }}>
-      <CardHeader title="Contributors (30d)" />
+      <CardHeader
+        title="Contributors"
+        action={
+          <Typography
+            variant='h6'
+            sx={{
+              marginTop: '0.2rem'
+            }}
+          >
+            last 30 days
+          </Typography>
+        }
+      />
       <ChartWrapperStyle dir="ltr">
         <ReactApexChart type="donut" series={state.chartData} options={chartOptions} height={310} />
       </ChartWrapperStyle>
