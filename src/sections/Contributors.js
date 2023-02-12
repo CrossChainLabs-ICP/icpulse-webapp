@@ -93,9 +93,9 @@ function Contributors() {
         title="Contributors"
         action={
           <Typography
-            variant='h6'
+            variant='caption'
             sx={{
-              marginTop: '0.2rem'
+              color: 'text.secondary'
             }}
           >
             last 30 days
