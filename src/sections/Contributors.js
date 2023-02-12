@@ -90,17 +90,21 @@ function Contributors() {
   return (
     <Card sx={{ marginTop: '3rem', boxShadow: 4 }}>
       <CardHeader
-        title="Contributors"
-        action={
-          <Typography
-            variant='caption'
-            sx={{
-              color: 'text.secondary'
-            }}
-          >
-            last 30 days
-          </Typography>
+        title={
+          <>
+            Contributors
+            <Typography
+              variant='caption'
+              sx={{
+                marginLeft: '16rem',
+                color: 'text.secondary',
+              }}
+            >
+              last 30 days
+            </Typography>
+          </>
         }
+
       />
       <ChartWrapperStyle dir="ltr">
         <ReactApexChart type="donut" series={state.chartData} options={chartOptions} height={310} />
