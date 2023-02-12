@@ -1,4 +1,7 @@
-import { alpha, styled } from '@mui/material/styles';
+import {
+  // alpha,
+  styled
+} from '@mui/material/styles';
 import { AppBar, Toolbar, Typography, Grid, } from '@mui/material';
 
 
@@ -9,13 +12,13 @@ const BG_COLOR = '#FFFFFF';
 
 const HEIGHT = 92;
 
-const RootStyle = styled(AppBar)(({ theme }) => ({
-  boxShadow: 'none',
-  backdropFilter: 'blur(6px)',
-  WebkitBackdropFilter: 'blur(6px)',
-  backgroundColor: alpha(theme.palette.background, 0.72),
-  width: `calc(100%}px)`
-}));
+// const RootStyle = styled(AppBar)(({ theme }) => ({
+//   boxShadow: 'none',
+//   backdropFilter: 'blur(6px)',
+//   WebkitBackdropFilter: 'blur(6px)',
+//   backgroundColor: alpha(theme.palette.background, 0.72),
+//   width: `calc(100%}px)`
+// }));
 
 const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
   minHeight: HEIGHT,

@@ -65,14 +65,8 @@ function Commits() {
     },
     stroke: {
       width: 2,
-       colors: ["#F15A24", "#F2C1B0"],
+      colors: ["#F15A24", "#F2C1B0"],
       //colors: ["#F2C1B0", "#F15A24"],
-    },
-    grid: {
-      borderColor: '#000000',
-    },
-    chart: {
-      foreColor: '#000000'
     },
 
   });

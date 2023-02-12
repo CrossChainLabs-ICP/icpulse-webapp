@@ -1,4 +1,3 @@
-import { useTheme } from '@mui/material/styles';
 import { Container, Grid } from '@mui/material';
 import { useState, useEffect } from 'react';
 import Page from '../components/Page';

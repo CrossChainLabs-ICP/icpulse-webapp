@@ -63,12 +63,6 @@ function Ecosystem() {
       colors: ["#F15A24", "#F2C1B0"],
       strokeColors: ["#F15A24", "#F2C1B0"],
     },
-    grid: {
-      borderColor: '#000000',
-    },
-    chart: {
-      foreColor: '#000000',
-    }
   });
 
   return (

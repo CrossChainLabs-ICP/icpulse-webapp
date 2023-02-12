@@ -1,7 +1,7 @@
 /** @module CardWidget **/
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import { Box, Card, Typography, CardHeader } from '@mui/material';
+import { Box, Card, Typography } from '@mui/material';
 import palette from '../theme/palette';
 
 CardWidget.propTypes = {
@@ -9,7 +9,7 @@ CardWidget.propTypes = {
   value: PropTypes.string.isRequired,
 };
 
-const RootStyle = styled(Card)(({ }) => ({
+const RootStyle = styled(Card)(() => ({
   textAlign: 'center',
   backgroundColor: palette.card,
 }));
