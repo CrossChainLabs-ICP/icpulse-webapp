@@ -15,7 +15,7 @@ function Ecosystem() {
     categories: [],
     data: [
       { name: 'Core', data: [] },
-      { name: 'Ecosystem', data: [] }
+      { name: 'Community', data: [] }
     ]
   });
 
@@ -36,7 +36,7 @@ function Ecosystem() {
       activity.forEach(item => {
         contributorsData.push(item.active_contributors);
         reposData.push(item.active_repos);
-        categories.push(item.display_month);
+        categories.push(item.display_month.slice(0, -3));
       });
 
       setState({
@@ -44,7 +44,7 @@ function Ecosystem() {
         categories: categories,
         data: [
           { name: 'Core', data: contributorsData },
-          { name: 'Ecosystem ', data: reposData }
+          { name: 'Community ', data: reposData }
         ]
       });
     });

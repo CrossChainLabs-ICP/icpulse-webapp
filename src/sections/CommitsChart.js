@@ -16,7 +16,7 @@ function Commits() {
     categories: [],
     data: [
       { name: 'Core', data: [] },
-      { name: 'Ecosystem ', data: [] }
+      { name: 'Community ', data: [] }
     ]
   });
 
@@ -37,7 +37,7 @@ function Commits() {
       commits.forEach(item => {
         coreData.push(item.commits_core);
         ecosystemData.push(item.commits_ecosystem ? item.commits_ecosystem : 0);
-        categories.push(item.display_month);
+        categories.push(item.display_month.slice(0, -3));
       });
 
       setState({
@@ -45,7 +45,7 @@ function Commits() {
         categories: categories,
         data: [
           { name: 'Core', data: coreData },
-          { name: 'Ecosystem', data: ecosystemData }
+          { name: 'Community', data: ecosystemData }
         ]
       });
     });

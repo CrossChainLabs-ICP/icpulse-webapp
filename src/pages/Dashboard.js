@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Page from '../components/Page';
 import { Footer } from '../components/Footer';
 import { Client } from '../utils/client';
+import { number } from '../utils/format';
 
 import {
   RecentCommits,
@@ -59,16 +60,16 @@ export default function Dashboard() {
   }, [setState]);
 
   return (
-    <Page title="IcPulse">
+    <Page title="ICPulse">
       <Container maxWidth={themeStretch ? false : 'xl'}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={3}>
             <CardWidget
               name='Contributors'
-              value={((state.contributors) ? (state.contributors) : ' ')}
+              value={((state.contributors) ? number(state.contributors) : ' ')}
               subtitle={((state.new_contributors_last_week > 0) ?
-                ('+ ' + state.new_contributors_last_week) + ' than last week' :
-                (state.new_contributors_last_month) ? ('+ ' + state.new_contributors_last_month) + ' then last month'
+                ('+ ' + number(state.new_contributors_last_week)) + ' than last week' :
+                (state.new_contributors_last_month) ? ('+ ' + number(state.new_contributors_last_month)) + ' then last month'
                   : ' ')}
             />
           </Grid>
@@ -76,10 +77,10 @@ export default function Dashboard() {
           <Grid item xs={12} md={3}>
             <CardWidget
               name='Repositories'
-              value={((state.repositories) ? (state.repositories) : ' ')}
+              value={((state.repositories) ? number(state.repositories) : ' ')}
               subtitle={((state.new_repos_last_week > 0) ?
-                ('+ ' + state.new_repos_last_week) + ' than last week' :
-                (state.new_repos_last_month) ? ('+ ' + state.new_repos_last_month) + ' then last month'
+                ('+ ' + number(state.new_repos_last_week)) + ' than last week' :
+                (state.new_repos_last_month) ? ('+ ' + number(state.new_repos_last_month)) + ' then last month'
                   : ' ')}
             />
           </Grid>
@@ -87,20 +88,20 @@ export default function Dashboard() {
           <Grid item xs={12} md={3}>
             <CardWidget
               name='Commits'
-              value={((state.commits) ? (state.commits) : ' ')}
+              value={((state.commits) ? number(state.commits) : ' ')}
               subtitle={((state.new_commits_last_week > 0) ?
-                ('+ ' + state.new_commits_last_week) + ' than last week' :
-                (state.new_commits_last_month) ? ('+ ' + state.new_commits_last_month) + ' then last month'
+                ('+ ' + number(state.new_commits_last_week)) + ' than last week' :
+                (state.new_commits_last_month) ? ('+ ' + number(state.new_commits_last_month)) + ' then last month'
                   : ' ')}
             />
           </Grid>
           <Grid item xs={12} md={3}>
             <CardWidget
               name='PRs'
-              value={((state.prs) ? (state.prs) : ' ')}
+              value={((state.prs) ? number(state.prs) : ' ')}
               subtitle={((state.new_prs_last_week > 0) ?
-                ('+ ' + state.new_prs_last_week) + ' than last week' :
-                (state.new_prs_last_month) ? ('+ ' + state.new_prs_last_month) + ' then last month'
+                ('+ ' + number(state.new_prs_last_week)) + ' than last week' :
+                (state.new_prs_last_month) ? ('+ ' + number(state.new_prs_last_month)) + ' then last month'
                   : ' ')}
             />
           </Grid>

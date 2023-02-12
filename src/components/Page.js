@@ -7,7 +7,7 @@ const Page = forwardRef(({ children, title = '', ...other }, ref) => {
   return (
     <Box ref={ref} {...other}>
       <Helmet>
-        <title>IcPulse</title>
+        <title>ICPulse</title>
       </Helmet>
       {children}
     </Box>

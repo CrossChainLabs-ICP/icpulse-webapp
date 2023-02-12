@@ -24,7 +24,7 @@ test('Title', () => {
     render(<App />);
   }, container);
 
-  expect(screen.getByText(/IcPulse/i)).toBeInTheDocument();
+  expect(screen.getByText(/ICPulse/i)).toBeInTheDocument();
 });
 
 test('CardWidget', () => {
