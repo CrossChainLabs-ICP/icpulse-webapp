@@ -63,11 +63,11 @@ function Commits() {
       colors: ["#F15A24", "#F2C1B0"],
       //colors: ["#F2C1B0", "#F15A24"],
     },
-    stroke: {
-      width: 2,
-      colors: ["#F15A24", "#F2C1B0"],
-      //colors: ["#F2C1B0", "#F15A24"],
-    },
+    // stroke: {
+    //   width: 2,
+    //   colors: ["#F15A24", "#F2C1B0"],
+    //   //colors: ["#F2C1B0", "#F15A24"],
+    // },
 
   });
 
