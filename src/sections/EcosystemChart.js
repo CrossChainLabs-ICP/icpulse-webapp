@@ -22,20 +22,20 @@ function Ecosystem() {
   useEffect(() => {
     const client = new Client();
 
-    client.get('activity').then((response) => {
-      let activity = response;
-      activity.pop();
+    client.get('active_repos').then((response) => {
+      let active_repos = response;
+      active_repos.pop();
 
-      if (activity.length > 12) {
-        activity.splice(0, activity.length - 12);
+      if (active_repos.length > 12) {
+        active_repos.splice(0, active_repos.length - 12);
       }
-      let contributorsData = [];
-      let reposData = [];
+      let active_repos_core = [];
+      let active_repos_ecosystem = [];
       let categories = [];
 
-      activity.forEach(item => {
-        contributorsData.push(item.active_contributors);
-        reposData.push(item.active_repos);
+      active_repos.forEach(item => {
+        active_repos_core.push(item.active_repos_core);
+        active_repos_ecosystem.push(item.active_repos_ecosystem);
         categories.push(item.display_month.slice(0, -3));
       });
 
@@ -43,8 +43,8 @@ function Ecosystem() {
         loading: false,
         categories: categories,
         data: [
-          { name: 'Core', data: contributorsData },
-          { name: 'Community ', data: reposData }
+          { name: 'Core', data: active_repos_core },
+          { name: 'Community ', data: active_repos_ecosystem }
         ]
       });
     });

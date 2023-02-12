@@ -89,7 +89,7 @@ function Contributors() {
 
   return (
     <Card sx={{ marginTop: '3rem', boxShadow: 4 }}>
-      <CardHeader title="Contributors" />
+      <CardHeader title="Contributors (30d)" />
       <ChartWrapperStyle dir="ltr">
         <ReactApexChart type="donut" series={state.chartData} options={chartOptions} height={310} />
       </ChartWrapperStyle>
