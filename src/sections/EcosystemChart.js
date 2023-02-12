@@ -55,10 +55,10 @@ function Ecosystem() {
       categories: state.categories,
     },
     colors: ["#F15A24", "#F2C1B0"],
-    stroke: {
-      width: 2,
-      colors: ["#F15A24", '#F2C1B0'],
-    },
+    // stroke: {
+    //   width: 2,
+    //   colors: ["#F15A24", '#F2C1B0'],
+    // },
     markers: {
       colors: ["#F15A24", "#F2C1B0"],
       strokeColors: ["#F15A24", "#F2C1B0"],
