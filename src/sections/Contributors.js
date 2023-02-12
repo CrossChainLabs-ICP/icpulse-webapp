@@ -46,8 +46,8 @@ function Contributors() {
 
   const chartOptions = merge(CustomChart(), {
     colors: [
-      "#F2C1B0",
       "#F15A24",
+      "#F2C1B0",
     ],
     chart: {
       width: 500
